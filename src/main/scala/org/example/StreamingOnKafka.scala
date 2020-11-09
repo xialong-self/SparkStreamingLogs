@@ -26,7 +26,7 @@ import scala.collection.mutable.ListBuffer
 object StreamingOnKafka {
 
   def main(args: Array[String]): Unit = {
-    val checkpointPath = "C:\\Users\\xialong\\Desktop\\2020-08-25Scala开始\\jar"
+    val checkpointPath = "D:\\C盘桌面文件\\2020-08-25Scala开始\\jar"
     val conf = new SparkConf()
       .setMaster("local")
       .setAppName("StreamingOnKafka")
@@ -37,7 +37,7 @@ object StreamingOnKafka {
 
     val topicName = Set[String]("test")
     val kafkaParams = Map[String,Object](
-      "bootstrap.servers"->"192.168.255.140:9092",
+      "bootstrap.servers"->"192.168.31.140:9092",
       "key.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
       "value.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
       "group.id"->"kafka-test-group",

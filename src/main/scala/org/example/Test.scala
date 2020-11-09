@@ -13,7 +13,7 @@ object Test {
     val conf=new SparkConf().setAppName("Test").setMaster("local")
 
     val sparkContext=new SparkContext(conf)
-    val data=sparkContext.textFile("C:\\Users\\xialong\\Desktop\\2020-08-25Scala开始\\Log.txt")
+    val data=sparkContext.textFile("D:\\C盘桌面文件\\2020-08-25Scala开始\\Log.txt")
 
 
     val data_yx=data.map(line=>{
@@ -35,7 +35,7 @@ object Test {
       }
     })
     val data_x=data_yx.filter(_.courseId!=0)
-//    data_x.collect().foreach(println)
+    data_x.collect().foreach(println)
 //
 //    val dataSearch=data_x.filter(_.referer!="null").map(mp=>{
 //      val http=mp.referer.replaceAll("//","/")
